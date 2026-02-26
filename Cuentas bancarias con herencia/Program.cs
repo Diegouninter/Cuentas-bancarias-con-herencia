@@ -42,7 +42,6 @@ namespace Cuentas_bancarias_con_herencia
                         Console.Write("Entrada inválida. Ingrese una cantidad positiva: ");
                     }
 
-                    // Comprobar regla de saldo mínimo antes de intentar el retiro
                     decimal nuevoSaldo = ahorros.ObtenerSaldo() - montoRet;
                     if (nuevoSaldo < 500m)
                     {
@@ -51,11 +50,11 @@ namespace Cuentas_bancarias_con_herencia
                         string intentar = Console.ReadLine();
                         if (string.IsNullOrEmpty(intentar) || !intentar.ToLower().StartsWith("s"))
                         {
-                            break; // salir sin más intentos
+                            break; 
                         }
                         else
                         {
-                            continue; // pedir monto nuevamente
+                            continue; 
                         }
                     }
 
